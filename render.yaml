@@ -9,8 +9,6 @@ services:
     envVars:
       - key: DJANGO_SETTINGS_MODULE
         value: buspass_project.settings
-      - key: ALLOWED_HOSTS
-        value: college-bus-pass.onrender.com
       - key: DEBUG
         value: False
       - key: SECRET_KEY
