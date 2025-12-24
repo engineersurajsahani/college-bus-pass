@@ -149,6 +149,43 @@ college-bus-pass/
 - PDF download functionality
 - Session-based authentication
 
+## Deployment to Render
+
+This application is ready for deployment to Render. Follow these steps:
+
+1. **Create a Render Account**: Sign up at [https://render.com](https://render.com)
+
+2. **Connect to GitHub**: Link your GitHub account to Render
+
+3. **Create a New Web Service**: 
+   - Choose your repository containing this code
+   - Select Python as the environment
+   - Render will automatically detect the `render.yaml` file
+
+4. **Environment Variables** (set in Render dashboard):
+   - `SECRET_KEY`: Generate a new secret key for production
+   - `DEBUG`: Set to `False` for production
+   - `ALLOWED_HOSTS`: Set to your Render service URL (e.g., `your-app.onrender.com`)
+   - `DATABASE_URL`: Will be automatically configured if using Render's PostgreSQL
+
+5. **Build and Deploy**:
+   - Render will automatically run the build command from `render.yaml`
+   - The application will be deployed using gunicorn
+
+## Render Configuration (`render.yaml`)
+
+The `render.yaml` file contains all necessary configurations for deployment:
+- Python environment setup
+- Dependencies installation
+- Static files collection
+- Gunicorn as the production server
+- PostgreSQL database configuration
+- Environment variables management
+
+## Local Development Setup
+
+For local development, follow the original setup instructions below:
+
 ## Future Enhancements
 
 - Email notifications for pass approval/rejection
