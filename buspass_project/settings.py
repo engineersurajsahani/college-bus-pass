@@ -32,14 +32,14 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='127.0.0.1,localhost,college-bus
 # Application definition
 
 INSTALLED_APPS = [
-   "admin_interface",
-    "colorfield",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'colorfield',
+    'admin_interface',
     'buspass',  # Our bus pass management app
 ]
 
